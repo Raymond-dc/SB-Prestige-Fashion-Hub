@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SB Prestige Fashion Hub</title>
+    <style>
+        :root {
+            --bg-dark: #0a0e17;
+            --card-bg: #151b28;
+            --accent: #f59e0b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            padding-bottom: 90px;
+        }
+        /* Top Navigation Bar */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background: rgba(15, 23, 42, 0.95);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--accent);
+            letter-spacing: 1px;
+        }
+        .header-icons span {
+            font-size: 1.3rem;
+            margin-left: 15px;
+            cursor: pointer;
+        }
+        /* Container */
+        .container {
+            padding: 20px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        /* Section Titles */
+        .section-title {
+            font-size: 1.4rem;
+            font-weight: 800;
+            margin: 30px 0 15px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-main);
+            border-left: 4px solid var(--accent);
+            padding-left: 10px;
+        }
+        /* Product Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        .product-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .product-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        .product-info {
+            padding: 12px;
+        }
+        .product-name {
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: #cbd5e1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .product-price {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 10px;
+        }
+        .order-btn {
+            display: block;
+            text-align: center;
+            background: var(--accent);
+            color: #000;
+            padding: 8px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+        .order-btn:hover {
+            opacity: 0.9;
+        }
+        /* Bottom Navigation Bar */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #0f172a;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            justify-content: space-around;
+            padding: 12px 0;
+            z-index: 1000;
+        }
+        .nav-item {
+            text-align: center;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.75rem;
+        }
+        .nav-item.active {
+            color: var(--accent);
+        }
+        .nav-item div {
+            font-size: 1.2rem;
+            margin-bottom: 2px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">SB PRESTIGE</div>
+        <div class="header-icons">
+            <span>🛒</span>
+            <span>🌙</span>
+            <span>☰</span>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <!-- POLOS -->
+        <div class="section-title">Polos</div>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://i.ibb.co/PzbPprNz/db1d6e33-b43c-451a-be52-40a70d575988.jpg" alt="America Top">
+                <div class="product-info">
+                    <div class="product-name">AMERICA TOP</div>
+                    <div class="product-price">#17,000</div>
+                    <a href="https://wa.me/2348062451101?text=Hello%20SB%20Prestige,%20I%20want%20to%20order%20AMERICA%20TOP%20for%20%2317,000" class="order-btn" target="_blank">Order via WhatsApp</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://i.ibb.co/Hfj5Pgny/57d0cd90-8722-4563-be9f-eaadc3822301.jpg" alt="Debit">
+                <div class="product-info">
+                    <div class="product-name">DEBIT</div>
+                    <div class="product-price">#15,000</div>
+                    <a href="https://wa.me/2348062451101?text=Hello%20SB%20Prestige,%20I%20want%20to%20order%20DEBIT%20for%20%2315,000" class="order-btn" target="_blank">Order via WhatsApp</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://i.ibb.co/YFDRDFXm/3767dbe7-9daf-4819-a14b-5a421f19c5b7.jpg" alt="Black Resa">
+                <div class="product-info">
+                    <div class="product-name">BLACK RESA</div>
+                    <div class="product-price">#16,000</div>
+                    <a href="https://wa.me/2348062451101?text=Hello%20SB%20Prestige,%20I%20want%20to%20order%20BLACK%20RESA%20for%20%2316,000" class="order-btn" target="_blank">Order via WhatsApp</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://i.ibb.co/6JrXVsSS/f2637126-8840-495c-b1b8-98c82f0a5662.jpg" alt="Trend Now">
+                <div class="product-info">
+                    <div class="product-name">TKEND NOW</div>
+                    <div class="product-price">#18,000</div>
+                    <a href="https://wa.me/2348062451101?text=Hello%20SB%20Prestige,%20I%20want%20to%20order%20TKEND%20NOW%20for%20%2318,000" class="order-btn" target="_blank">Order via WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- T-SHIRTS -->
+        <div class="section-title">T-Shirts</div>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://i.ibb.co/yBQPCy9Y/6a256ef5-4b9a-4706-ba7f-d26597849d50.jpg" alt="Feel The Hype">
+                <div class="product-info">
+                    <div class="product-name">FEEL THE HYPE</div>
+                    <div class="product-price">#15,000</div>
+                    <a href="https://wa.me/2348062451101?text=Hello%20SB%20Prestige,%20I%20want%20to%20order%20FEEL%20THE%20HYPE%20for%20%2315,000" class="order-btn" target="_blank">Order via WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- BAGGY -->
+        <div class="section-title">Baggy</div>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://i.ibb.co/chqtN6Qq/03c50ee6-1d9b-41c2-a3b1-1b7d765b8e1d.jpg" alt="Baggy Jeans">
+                <div class="product-info">
+                    <div class="product-name">Baggy Style 1</div>
+                    <div class="product-price">#22,000</div>
+                    <a href="https://wa.me/2348062451101?text=Hello%20SB%20Prestige,%20I%20want%20to%20order%20Baggy%20Style%201%20for%20%2322,000" class="order-btn" target="_blank">Order via WhatsApp</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://i.ibb.co/m5K1PPff/8d02181e-f296-4be7-87b5-ca17613ef143.jpg" alt="Baggy Jeans">
+                <div class="product-info">
+                    <div class="product-name">Baggy Style 2</div>
+                    <div class="product-price">#22,000</div>
+                    <a href="https://wa.me/2348062451101?text=Hello%20SB%20Prestige,%20I%20want%20to%20order%20Baggy%20Style%202%20for%20%2322,000" class="order-btn" target="_blank">Order via WhatsApp</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://i.ibb.co/3940r0nF/d787c776-32dd-4837-825b-780db846d9dd.jpg" alt="Baggy Jeans">
+                <div class="product-info">
+                    <div class="product-name">Baggy Style 3</div>
+                    <div class="product-price">#22,000</div>
+                    <a href="https://wa.me/2348062451101?text=Hello%20SB%20Prestige,%20I%20want%20to%20order%20Baggy%20Style%203%20for%20%2322,000" class="order-btn" target="_blank">Order via WhatsApp</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://i.ibb.co/cS3K1P49/c431b8d6-11e7-48d9-adbd-c3a066d4ff72.jpg" alt="Baggy Jeans">
+                <div class="product-info">
+                    <div class="product-name">Baggy Style 4</div>
+                    <div class="product-price">#22,000</div>
+                    <a href="https://wa.me/2348062451101?text=Hello%20SB%20Prestige,%20I%20want%20to%20order%20Baggy%20Style%204%20for%20%2322,000" class="order-btn" target="_blank">Order via WhatsApp</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://i.ibb.co/Q3qs9gR8/2b15a2c4-8413-4e43-92cf-8b3d7a94cf1e.jpg" alt="Baggy Jeans">
+                <div class="product-info">
+                    <div class="product-name">Baggy Style 5</div>
+                    <div class="product-price">#22,000</div>
+                    <a href="https://wa.me/2348062451101?text=Hello%20SB%20Prestige,%20I%20want%20to%20order%20Baggy%20Style%205%20for%20%2322,000" class="order-btn" target="_blank">Order via WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- SHOES -->
+        <div class="section-title">Shoes</div>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://i.ibb.co/rGjD85QQ/5f346715-107c-4e9d-8f27-4122e84fd9b3.jpg" alt="Nacked Wolf">
+                <div class="product-info">
+                    <div class="product-name">NACKED WOLF</div>
+                    <div class="product-price">#38,000</div>
+                    <a href="https://wa.me/2348062451101?text=Hello%20SB%20Prestige,%20I%20want%20to%20order%20NACKED%20WOLF%20for%20%2338,000" class="order-btn" target="_blank">Order via WhatsApp</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://i.ibb.co/G3s4v0vY/3555229a-2989-4040-82c3-490800ee492b.jpg" alt="Louis Vuitton">
+                <div class="product-info">
+                    <div class="product-name">LOUIS VUITTON</div>
+                    <div class="product-price">#40,000</div>
+                    <a href="https://wa.me/2348062451101?text=Hello%20SB%20Prestige,%20I%20want%20to%20order%20LOUIS%20VUITTON%20for%20%2340,000" class="order-btn" target="_blank">Order via WhatsApp</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://i.ibb.co/3YdNxKBd/b2d5ec80-60bb-408b-ad91-174e1dab105b.jpg" alt="Calvin Klein">
+                <div class="product-info">
+                    <div class="product-name">CALVIN KLEIN</div>
+                    <div class="product-price">#40,000</div>
+                    <a href="https://wa.me/2348062451101?text=Hello%20SB%20Prestige,%20I%20want%20to%20order%20CALVIN%20KLEIN%20for%20%2340,000" class="order-btn" target="_blank">Order via WhatsApp</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://i.ibb.co/BKfKTt8c/78ac6e8f-df12-4c27-babc-183eedfa9ef8.jpg" alt="Versace">
+                <div class="product-info">
+                    <div class="product-name">VERSACE</div>
+                    <div class="product-price">#40,000</div>
+                    <a href="https://wa.me/2348062451101?text=Hello%20SB%20Prestige,%20I%20want%20to%20order%20VERSACE%20for%20%2340,000" class="order-btn" target="_blank">Order via WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDES -->
+        <div class="section-title">Slides</div>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://i.ibb.co/Dfx8gTw9/ecd49336-7c62-4606-9655-ca082ce86536.jpg" alt="Slides">
+                <div class="product-info">
+                    <div class="product-name">Slides Style 1</div>
+                    <div class="product-price">#40,000</div>
+                    <a href="https://wa.me/2348062451101?text=Hello%20SB%20Prestige,%20I%20want%20to%20order%20Slides%20Style%201%20for%20%2340,000" class="order-btn" target="_blank">Order via WhatsApp</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://i.ibb.co/6cJkjJgf/a6924468-82f9-41dc-92c4-3dbf2e5fdf3b.jpg" alt="Slides">
+                <div class="product-info">
+                    <div class="product-name">Slides Style 2</div>
+                    <div class="product-price">#40,000</div>
+                    <a href="https://wa.me/2348062451101?text=Hello%20SB%20Prestige,%20I%20want%20to%20order%20Slides%20Style%202%20for%20%2340,000" class="order-btn" target="_blank">Order via WhatsApp</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://i.ibb.co/pvhnjHkw/6f20d97d-9b09-4595-ab4a-1ce9c1577e43.jpg" alt="Slides">
+                <div class="product-info">
+                    <div class="product-name">Slides Style 3</div>
+                    <div class="product-price">#40,000</div>
+                    <a href="https://wa.me/2348062451101?text=Hello%20SB%20Prestige,%20I%20want%20to%20order%20Slides%20Style%203%20for%20%2340,000" class="order-btn" target="_blank">Order via WhatsApp</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://i.ibb.co/5X1WbvYJ/b64d2128-a6c7-4a56-a036-113642077e30.jpg" alt="Slides">
+                <div class="product-info">
+                    <div class="product-name">Slides Style 4</div>
+                    <div class="product-price">#40,000</div>
+                    <a href="https://wa.me/2348062451101?text=Hello%20SB%20Prestige,%20I%20want%20to%20order%20Slides%20Style%204%20for%20%2340,000" class="order-btn" target="_blank">Order via WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bottom Navigation Bar -->
+    <div class="bottom-nav">
+        <a href="#" class="nav-item active">
+            <div>🏠</div>
+            Home
+        </a>
+        <a href="https://wa.me/2348062451101?text=Hello%20SB%20Prestige,%20I%20want%20to%20make%20an%20enquiry" class="nav-item" target="_blank">
+            <div>🛍️</div>
+            Shop
+        </a>
+        <a href="https://wa.me/2348062451101?text=Hello%20SB%20Prestige,%20I%20want%20to%20check%20my%20cart" class="nav-item" target="_blank">
+            <div>🛒</div>
+            Cart
+        </a>
+        <a href="tel:08062451101" class="nav-item">
+            <div>📞</div>
+            Call Us
+        </a>
+    </div>
+
+</body>
+</html>
